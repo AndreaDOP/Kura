@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KURA - Identidad Interoperable</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .fade-slide {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 scroll-smooth">
+
+<!-- HERO -->
+<section class="relative bg-gradient-to-br from-[#EEF0FF] to-white py-24 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#252383] mb-4">
+      El primer motor de identidad interoperable y validado por alias en Chile
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-8">
+      KURA transforma transferencias bancarias en una experiencia simple, segura y humana.
+    </p>
+    <div class="flex justify-center gap-4 mt-8 flex-wrap">
+      <a href="#slider" class="bg-[#252383] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#1d1b6b] transition">
+        ¿Querés ver cómo funciona?
+      </a>
+      <a href="#contacto" class="bg-[#252383] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#1d1b6b] transition">
+        Hablemos
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<section class="py-16 px-6 bg-white">
+  <h2 class="text-3xl font-bold text-center mb-12">¿Por qué KURA?</h2>
+  <div class="grid md:grid-cols-4 gap-6 text-center">
+    <div><div class="text-5xl mb-3">🔒</div><h3 class="font-semibold text-lg">Seguridad</h3><p>Auditable y sin errores.</p></div>
+    <div><div class="text-5xl mb-3">🤝</div><h3 class="font-semibold text-lg">Confianza</h3><p>El usuario tiene el control final.</p></div>
+    <div><div class="text-5xl mb-3">⚙️</div><h3 class="font-semibold text-lg">Interoperabilidad</h3><p>Funciona con todo el ecosistema financiero.</p></div>
+    <div><div class="text-5xl mb-3">✨</div><h3 class="font-semibold text-lg">Simplicidad</h3><p>Alias memorables y sin fricciones.</p></div>
+  </div>
+</section>
+
+<!-- VIDEO DEMO -->
+<section class="py-16 px-6 bg-gray-50 text-center">
+  <h2 class="text-3xl font-bold mb-4 text-gray-800">KURA en acción</h2>
+  <p class="text-lg text-gray-600 mb-8">Conocé la experiencia de transferir usando alias, en un entorno simple y seguro.</p>
+  <button onclick="mostrarDemo()" class="bg-[#252383] hover:bg-[#1d1b6b] text-white font-semibold px-8 py-4 rounded-full transition">
+    ▶ Ver demo
+  </button>
+  <div id="demo-video" class="mt-10 max-w-lg mx-auto hidden">
+    <video controls class="rounded-lg shadow-lg w-full">
+      <source src="kura.mp4" type="video/mp4">
+      Tu navegador no admite la reproducción de video.
+    </video>
+  </div>
+</section>
+
+<!-- SLIDER INTERACTIVO -->
+<section id="slider" class="py-16 px-6 bg-white text-center">
+  <h2 class="text-3xl font-bold mb-8">Así funciona KURA</h2>
+  <div class="relative w-full max-w-3xl mx-auto">
+    <img id="interactive-slider-img" src="kura-1.png" alt="Paso 1" class="w-full rounded shadow-lg transition-all duration-700 fade-slide" />
+    <button onclick="prevSlide()" class="absolute top-1/2 left-0 -translate-y-1/2 bg-white border border-gray-300 text-2xl px-4 py-2 rounded-l hover:bg-gray-100">⬅️</button>
+    <button onclick="nextSlide()" class="absolute top-1/2 right-0 -translate-y-1/2 bg-white border border-gray-300 text-2xl px-4 py-2 rounded-r hover:bg-gray-100">➡️</button>
+    <p id="interactive-slide-caption" class="mt-6 text-gray-600 text-lg font-medium">Paso 1 – Ingresás a tu app bancaria</p>
+  </div>
+</section>
+
+<!-- WHITE LABEL -->
+<section class="py-20 px-6 bg-gray-50 text-center">
+  <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Querés integrar KURA con tu marca?</h2>
+  <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+    KURA también se ofrece como <strong>solución White Label</strong> para bancos, billeteras digitales y plataformas fintech.
+  </p>
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left">
+    <div class="bg-white p-6 rounded-lg shadow-sm">
+      <h3 class="text-xl font-semibold mb-2">⚙️ Motor de validación</h3>
+      <p>Infraestructura lista para escalar y auditar.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-sm">
+      <h3 class="text-xl font-semibold mb-2">🔐 API segura</h3>
+      <p>Documentación clara y soporte técnico de integración.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-sm">
+      <h3 class="text-xl font-semibold mb-2">📊 Panel de monitoreo</h3>
+      <p>Estadísticas en tiempo real del uso de alias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-20 px-6 bg-white text-center">
+  <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Hablamos?</h2>
+  <p class="text-lg text-gray-600 max-w-xl mx-auto mb-10">Dejame tu consulta o solicitud de demo y me pondré en contacto personalmente.</p>
+  <form action="https://formsubmit.co/kuraaliaschile@gmail.com" method="POST" class="max-w-2xl mx-auto grid gap-6">
+    <input type="text" name="nombre" placeholder="Tu nombre" required class="border border-gray-300 px-4 py-3 rounded w-full" />
+    <input type="email" name="email" placeholder="Tu correo electrónico" required class="border border-gray-300 px-4 py-3 rounded w-full" />
+    <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required class="border border-gray-300 px-4 py-3 rounded w-full"></textarea>
+    <button type="submit" class="bg-[#252383] text-white font-semibold px-6 py-3 rounded hover:bg-[#1d1b6b] transition">Enviar mensaje</button>
+  </form>
+</section>
+
+<!-- SLIDER SCRIPT -->
+<script>
+  const slides = [
+    { src: "kura-1.png", caption: "Paso 1 – Ingresás a tu app bancaria" },
+    { src: "kura-2.png", caption: "Paso 2 – Elegís transferir por alias" },
+    { src: "kura-3.png", caption: "Paso 3 – Ingresás el alias de quien recibe" },
+    { src: "kura-4.png", caption: "Paso 4 – Verificás nombre y banco del destinatario" },
+    { src: "kura-5.png", caption: "Paso 5 – Ingresás el monto y motivo" },
+    { src: "kura-6.png", caption: "Paso 6 – ¡Listo! KURA confirma tu transferencia" }
+  ];
+  let currentIndex = 0;
+  function showSlide(index) {
+    const img = document.getElementById("interactive-slider-img");
+    const caption = document.getElementById("interactive-slide-caption");
+    img.classList.remove("fade-slide");
+    void img.offsetWidth;
+    img.classList.add("fade-slide");
+    img.src = slides[index].src;
+    img.alt = "Paso " + (index + 1);
+    caption.textContent = slides[index].caption;
+  }
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+  function mostrarDemo() {
+    const video = document.getElementById("demo-video");
+    video.classList.remove("hidden");
+    video.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+<!-- FOOTER -->
+<footer class="bg-gray-100 py-8 text-center">
+  <p class="text-sm text-gray-600">© 2025 Andrea Valdés Cepeda – Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
